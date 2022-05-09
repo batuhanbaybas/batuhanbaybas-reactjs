@@ -21,7 +21,6 @@ export const editCategory = createAsyncThunk("edit/category", async (category) =
 
 // post product data on api
 export const postPorudct = createAsyncThunk("post/product", async (product) => {
-    console.log(product)
     await axios.post(`${BASE_URL}products`, {
         name: product.name,
         description: product.description,

@@ -24,6 +24,7 @@ const Subnavi = () => {
     return (
         <div className='flex justify-between items-center '>
             <CustomBar className="p-2 w-1/3 ">
+                {products.length === 0 && <>There is no data</>}
                 {
 
                     products.length < 3 ?
