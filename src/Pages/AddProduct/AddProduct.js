@@ -1,28 +1,43 @@
 import { useFormik } from 'formik'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SelectComponent from '../../Components/SelectComponent/SelectComponent'
 import CustomBar from '../../CustomComponents/CustomBar/CustomBar'
 import CustomInput from '../../CustomComponents/CustomInput/CustomInput'
-
+import { fetchAllProducts, postPorudct } from '../../Redux/features/productSlice'
+import * as Yup from 'yup'
+import ValidationComponent from '../../Components/ValidationComponent/ValidationComponent'
 const AddProduct = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch()
 
-
+    const validationSchema = Yup.object().shape({
+        name: Yup.string().required("Please enter product name"),
+        price: Yup.number().required("Please enter product price"),
+        category: Yup.string().required("Please Select category for your product"),
+        description: Yup.string().required("Please enter your product description"),
+        avatar: Yup.string().required("Please select your product image")
+    })
 
     const formik = useFormik({
         initialValues: {
-            productName: '',
+            name: '',
             description: '',
-            imageUrl: '',
+            avatar: '',
             category: '',
             price: '',
         },
-        
+        validationSchema,
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2))
-            formik.resetForm()
-            navigate('/')
+            try {
+                dispatch(postPorudct(values))
+                dispatch(fetchAllProducts())
+                navigate('/')
+            } catch (error) {
+                alert(error.message)
+
+            }
         }
     })
 
@@ -30,13 +45,14 @@ const AddProduct = () => {
         <div className='max-w-xl mx-auto mt-16' >
             <h3 className='text-center font-bold text-2xl '>Create Product</h3>
             <form onSubmit={formik.handleSubmit}>
-
                 <CustomInput
                     placeholder={"Product name"}
+                    validation={formik.touched.name && formik.errors.name}
+                    validationMessage={formik.errors.name}
                     onChange={formik.handleChange}
                     value={formik.values.productName}
-                    name={"productName"} />
-
+                    name={"name"} />
+                {formik.errors.name && formik.touched.description && <ValidationComponent validationMessage={formik.errors.name} />}
                 <textarea
                     cols={50}
                     autoComplete='off'
@@ -45,18 +61,20 @@ const AddProduct = () => {
                     type="text" placeholder={"Description"}
                     onChange={formik.handleChange} value={formik.values.description}
                     className=" p-3 w-full rounded-xl h-24 resize-none  outline-none" />
-
                 <CustomInput
                     placeholder={"Image URL"}
+                    validation={formik.touched.description && formik.errors.description}
+                    validationMessage={formik.errors.nadescriptione}
                     onChange={formik.handleChange}
                     value={formik.values.imageUrl}
-                    name={"imageUrl"} />
-
-                <SelectComponent name="category" onChange={formik.handleChange} value={formik.values.category} className="p-3" />
+                    name={"avatar"} />
+                <SelectComponent validation={formik.errors.description && formik.touched.description} validationMessage={formik.errors.description} name="category" onChange={formik.handleChange} value={formik.values.category} className="p-3" />
 
                 <CustomInput
                     placeholder={"Price"}
                     type="number"
+                    validation={formik.touched.price && formik.errors.price}
+                    validationMessage={formik.errors.price}
                     onChange={formik.handleChange}
                     value={formik.values.price}
                     name={"price"} />

@@ -5,11 +5,11 @@ import Subnavi from '../Components/Subnavi/Subnavi'
 
 const HomeRoutes = () => {
     return (
-        <>
+        <div className='relative'>
             <Navbar />
             <Subnavi />
             <Outlet />
-        </>
+        </div>
     )
 }
 

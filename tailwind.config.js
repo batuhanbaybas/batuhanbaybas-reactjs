@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         primary: {
           background: "#eeeeee",
+          error_color: "#f44336"
 
         },
         secondary: {
