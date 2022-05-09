@@ -22,8 +22,8 @@ const Subnavi = () => {
 
 
     return (
-        <div className='flex justify-between items-center '>
-            <CustomBar className="p-2 w-1/3 ">
+        <div className='flex xl:flex-row flex-col text-center  justify-between items-center '>
+            <CustomBar className="p-2 xl:w-1/3 w-full ">
                 {products.length === 0 && <>There is no data</>}
                 {
 
@@ -36,7 +36,7 @@ const Subnavi = () => {
                 }
 
             </CustomBar>
-            <SelectComponent defaultValue={category} onChange={(e) => handleChange(e)} value={category} className="p-2 w-1/5" />
+            <SelectComponent defaultValue={category} onChange={(e) => handleChange(e)} value={category} className="p-2 xl:w-1/5 w-full text-center" />
         </div>
     )
 }

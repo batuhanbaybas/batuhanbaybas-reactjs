@@ -4,8 +4,8 @@ import CustomBar from '../../CustomComponents/CustomBar/CustomBar'
 
 const Navbar = () => {
     return (
-        <CustomBar className=' p-5  my-10'>
-            <div className='flex justify-between items-center font-medium italic text-2xl text-black'>
+        <CustomBar className='p-5  xl:my-10 my-5'>
+            <div className='flex justify-between items-center font-medium italic xl:text-2xl text-xl text-black'>
                 <Link to={"/"}>
                     UPayment Store
                 </Link>

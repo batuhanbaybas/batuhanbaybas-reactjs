@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import ImageComponent from '../../Components/ImageComponent/ImageComponent'
 import Loading from '../../Components/Loading/Loading'
-import { fetchSingleProduct,singlePageLoading, singleProduct } from '../../Redux/features/productSlice'
+import { fetchSingleProduct, singlePageLoading, singleProduct } from '../../Redux/features/productSlice'
 
 const ProductDetail = () => {
     const dispatch = useDispatch()
@@ -16,15 +16,15 @@ const ProductDetail = () => {
     }, [id, dispatch])
 
     return (
-        <div className='py-10'>
-          
+        <div className='xl:py-10 xl:px-0 px-5 '>
+
             {loading ? <Loading /> : (
                 <>
-                    <div className='flex h-64 '>
-                        <div className='w-1/3'>
+                    <div className='flex xl:h-64 xl:flex-row flex-col h-2/5 xl:p-0 px-5  '>
+                        <div className='xl:w-1/3 w-full'>
                             <ImageComponent className={"h-full"} product={product} />
                         </div>
-                        <div className='flex flex-col justify-between h-full px-14 text-3xl font-bold'>
+                        <div className='flex flex-col justify-between xl:items-stretch xl:m-0 mt-3 items-center h-full px-14 xl:text-3xl text-xl font-semibold'>
                             <h1 >{product.name}</h1>
                             <p><span className='pr-1'>$</span> {product.price}</p>
                         </div>
