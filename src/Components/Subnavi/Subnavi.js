@@ -22,7 +22,7 @@ const Subnavi = () => {
 
 
     return (
-        <div className='flex xl:flex-row flex-col text-center  justify-between items-center '>
+        <div className='flex xl:flex-row flex-col-reverse text-center  justify-between items-center '>
             <CustomBar className="p-2 xl:w-1/3 w-full ">
                 {products.length === 0 && <>There is no data</>}
                 {
