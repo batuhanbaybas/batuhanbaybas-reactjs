@@ -8,24 +8,12 @@ A case study project for **UPayment**
 
 ## Screenshots
 
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_home.png&#41;)
-
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_home_responsive.png&#41;)
-
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_create.png&#41;)
-
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_create_responsive.png&#41;)
-
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_detail.png&#41;)
-
-[//]: # (![App Screenshot]&#40;public/project_img/Upayment_store_detail_responsive.png&#41;)
-
-<img src="public/project_img/Upayment_store_home.png" width="33%%" />
-<img src="public/project_img/Upayment_store_detail.png" width="33%%">
-<img src="public/project_img/Upayment_store_create.png" width="33%%">
-<img src="public/project_img/Upayment_store_home_responsive.png" width="33%">
-<img src="public/project_img/uPayment_store_detail_responsive.png" width="33%">
-<img src="public/project_img/Upayment_store_create_responsive.png" width="33%">
+<img src="public/project_img/Upayment_store_home.png" alt="home page" width="33%" />
+<img src="public/project_img/Upayment_store_detail.png" alt="detail page" width="33%">
+<img src="public/project_img/Upayment_store_create.png" alt="create page" width="33%">
+<img src="public/project_img/Upayment_store_home_responsive.png" alt="home page responsive" width="33%">
+<img src="public/project_img/uPayment_store_detail_responsive.png" alt="detail page responsive" width="33%">
+<img src="public/project_img/Upayment_store_create_responsive.png" alt="create page responsive" width="33%">
 
 ## Run Locally
 
