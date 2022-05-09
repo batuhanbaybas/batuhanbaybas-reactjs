@@ -4,7 +4,7 @@ A case study project for **UPayment**
 
 ## Demo
 
-<!-- [See Demo](https://producter-todos-case.herokuapp.com/) -->
+[See Demo](https://batuhan-baybas-upayment-case-study.netlify.app/) 
 
 ## Screenshots
 
@@ -23,9 +23,9 @@ A case study project for **UPayment**
 <img src="public/project_img/Upayment_store_home.png" width="33%%" />
 <img src="public/project_img/Upayment_store_detail.png" width="33%%">
 <img src="public/project_img/Upayment_store_create.png" width="33%%">
-<img src="public/project_img/Upayment_store_home_responsive.png" width="25%">
-<img src="public/project_img/Upayment_store_detail_responsive.png" width="25%">
-<img src="public/project_img/Upayment_store_create_responsive.png" width="25%">
+<img src="public/project_img/Upayment_store_home_responsive.png" width="33%">
+<img src="public/project_img/uPayment_store_detail_responsive.png" width="33%">
+<img src="public/project_img/Upayment_store_create_responsive.png" width="33%">
 
 ## Run Locally
 
@@ -55,9 +55,10 @@ Start the dev server
 
 ## Tech Stack
 
-- [React-Lottie](https://github.com/chenqingspring/react-lottie) - Make beautiful, animated loading section adapt to your app.
 - [Redux-toolkit/react-redux](https://redux.js.org/) - A library for managing state in your React apps.
 - [Formik && Yup](https://formik.org/) - A library for validating and handling forms in React.
-- [Tailwindcss](https://tailwindcss.com/) - A utility-first CSS framework
 - [React-router-Dom](https://reactrouter.com/) - A routing library for React
+- [Tailwindcss](https://tailwindcss.com/) - A utility-first CSS framework
 - [Axios](https://axios-http.com/) - A Promise based HTTP client for the browser and Node.js
+- [React-Lottie](https://github.com/chenqingspring/react-lottie) - Make beautiful, animated loading section adapt to your app.
+
