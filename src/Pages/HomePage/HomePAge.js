@@ -16,8 +16,9 @@ const HomePAge = () => {
 
     return (
         <>
-            {isLoading && <Loading />}
-            <MainContent />
+            {isLoading ? <Loading /> :
+                <MainContent />
+            }
         </>
     )
 }
