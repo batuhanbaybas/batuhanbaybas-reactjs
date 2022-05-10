@@ -1,6 +1,6 @@
 #  UPayment Online Store
 
-A case study project for **UPayment**
+A case study project for **UPayments**
 
 ## Demo
 

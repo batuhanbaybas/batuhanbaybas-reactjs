@@ -85,6 +85,7 @@ const productSlice = createSlice({
 export const singlePageLoading = (state) => state.product.singleIsLoading;
 export const loadingSelect = (state) => state.product.isLoading;
 export const singleProduct = (state) => state.product.singleProduct;
+
 export const selectProduct = (state) => {
     // category is All or empty filter all products
     if (state.product.category === "All" || "") {

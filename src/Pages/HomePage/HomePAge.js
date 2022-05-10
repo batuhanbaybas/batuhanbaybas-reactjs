@@ -13,9 +13,9 @@ const HomePAge = () => {
     const isLoading = useSelector(selectIsLoading)
 
 
-
     return (
         <>
+
             {isLoading ? <Loading /> :
                 <MainContent />
             }
