@@ -13,11 +13,11 @@ const AddProduct = () => {
     const dispatch = useDispatch()
 
     const validationSchema = Yup.object().shape({
-        name: Yup.string().trim().required("Please enter product name"),
-        price: Yup.number().trim().required("Please enter product price"),
+        name: Yup.string().required("Please enter product name"),
+        price: Yup.number().required("Please enter product price"),
         category: Yup.string().required("Please Select category for your product"),
-        description: Yup.string().trim().required("Please enter your product description"),
-        avatar: Yup.string().trim().required("Please select your product image")
+        description: Yup.string().required("Please enter your product description"),
+        avatar: Yup.string().required("Please select your product image")
     })
 
     const formik = useFormik({
