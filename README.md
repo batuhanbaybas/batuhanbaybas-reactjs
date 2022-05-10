@@ -22,7 +22,7 @@ A case study project for **UPayments**
 Clone the project
 
 ```bash
- https://github.com/batuhanbaybas/batuhanbaybas-reactjs.git
+ git clone https://github.com/batuhanbaybas/batuhanbaybas-reactjs.git
 ```
 
 Go to the project directory
